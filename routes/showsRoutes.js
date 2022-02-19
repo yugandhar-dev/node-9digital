@@ -1,8 +1,7 @@
 const express = require('express');
+const filterShows = require('../controllers/showsController');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.status(200).json({ message: 'Here is your response' });
-});
+router.post('/', filterShows);
 
 module.exports = router;
