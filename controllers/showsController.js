@@ -4,11 +4,10 @@
 const filterShows = (req, res) => {
   try {
     throw error;
-    res.status(200).json({ message: 'Here is your response' });
+    res.status(200).json({ message: req.body.payload });
   } catch (error) {
-    res.status(400).json({
-      error: 'Could not decode request: JSON parsing failed',
-    });
+    res.status(400);
+    throw new Error('Could not decode request: JSON parsing failed');
   }
 };
 

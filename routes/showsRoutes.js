@@ -2,6 +2,6 @@ const express = require('express');
 const filterShows = require('../controllers/showsController');
 const router = express.Router();
 
-router.post('/', filterShows);
+router.route('/').post(filterShows);
 
 module.exports = router;
